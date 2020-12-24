@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Fade } from 'react-awesome-reveal'
 import Typography from '@material-ui/core/Typography';
 import './home.css'
 
@@ -7,40 +7,15 @@ export default function Home() {
 
   return (
     <>
-      <Typography>Dalton Ronan</Typography>
-      {/* <Card className='cardHome' style={{ marginTop: '7vh', marginLeft: '10vh' }}>
-        <CardMedia
-          className='cardMedia'
-          image={headshot}
-          title='headshot'
-        />
-        <CardContent className='cardContent'>
-          <Typography >
-            Hello! I'm
-                    </Typography>
-          <Typography variant="h4" color="primary" style={{ paddingTop: "0.5em", paddingBottom: "0.5em" }}>
-            <Box fontWeight={600}>
-              Dalton Ronan,
-                        </Box>
-          </Typography>
-          <Typography >
-            undergraduate Computing Science student at the University of Alberta in Edmonton, Canada.
-                    </Typography>
-          <Typography style={{ paddingTop: "0.5em", paddingBottom: "0.5em" }}>
-            Learn more about me.
-                    </Typography>
-        </CardContent>
-      </Card>
-      <Card className='cardHome' style={{ marginTop: '7vh', marginRight: '10vh' }}>
-        <CardContent>
-          <Typography variant="h5" color="primary" style={{ paddingTop: "0.5em", paddingBottom: "0.5em" }}>
-            "I'm still trying to figure it all out."
-                    </Typography>
-          <Typography color="textSecondary" style={{ paddingLeft: '3em' }} >
-            <Box fontStyle="italic">--Me, 20 seconds ago</Box>
-          </Typography>
-        </CardContent>
-      </Card> */}
+      <Fade direction='down' duration={2000}>
+        <Typography style={{ fontSize: 45 }}>Hello, I'm</Typography>
+      </Fade>
+      <Fade direction='left' delay={1000} duration={2000}>
+        <Typography variant='h2' color='primary'>Dalton Ronan</Typography>
+      </Fade>
+      <Fade direction='right' delay={3000} duration={2000}>
+        <Typography style={{ fontSize: 45 }}>undergraduate Computing Science student at the University of Alberta in Edmonton, Canada.</Typography>
+      </Fade>
     </>
   )
 }

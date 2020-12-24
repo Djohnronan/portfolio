@@ -4,7 +4,6 @@ export const lightTheme = {
     },
     typography: {
         "fontFamily": `"Montserrat"`,
-        "fontWeight": 600,
     }
 }
 export const darkTheme = {

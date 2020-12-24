@@ -16,3 +16,7 @@
 .MuiTab-root {
   text-transform: none !important;
 }
+
+.MuiTabs-root {
+  margin-left: auto;
+}

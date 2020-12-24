@@ -4,7 +4,6 @@ import { CardContent, CardMedia, Typography } from '@material-ui/core';
 import headshot from "../media/headshot.jpg"
 import fish from "../media/fish.jpg"
 import './about.css'
-import Carousel from 'react-material-ui-carousel'
 import { Parallax } from 'react-scroll-parallax';
 
 export default function About() {
@@ -45,7 +44,7 @@ export default function About() {
         </CardContent>
       </Card>
 
-      <Parallax x={['-95', '200']}>
+      {/* <Parallax x={['-95', '200']}>
         <Card className='aboutPhotoCarousel' style={{ marginTop: '7vh', marginLeft: '10vh' }}>
           <Carousel>
             {
@@ -58,7 +57,7 @@ export default function About() {
             }
           </Carousel>
         </Card>
-      </Parallax>
+      </Parallax> */}
       <Card className="aboutOther">
         <Typography>
           sample
