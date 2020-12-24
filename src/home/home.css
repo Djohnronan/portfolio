@@ -36,9 +36,3 @@
 .cardContent {
     max-width: 280px;
 }
-
-.homeBkg {
-    background: linear-gradient(135deg, #ffffff 50%, #a8afa9 50%);
-    height: 94vh;
-    overflow: hidden;
-}

@@ -1,16 +1,14 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import { CardContent, CardMedia } from '@material-ui/core';
+
 import Typography from '@material-ui/core/Typography';
 import './home.css'
-import Box from '@material-ui/core/Box';
-import headshot from "../media/headshot.jpg"
 
 export default function Home() {
 
   return (
-    <div className='homeBkg'>
-      <Card className='cardHome' style={{ marginTop: '7vh', marginLeft: '10vh' }}>
+    <>
+      <Typography>Dalton Ronan</Typography>
+      {/* <Card className='cardHome' style={{ marginTop: '7vh', marginLeft: '10vh' }}>
         <CardMedia
           className='cardMedia'
           image={headshot}
@@ -42,7 +40,7 @@ export default function Home() {
             <Box fontStyle="italic">--Me, 20 seconds ago</Box>
           </Typography>
         </CardContent>
-      </Card>
-    </div>
+      </Card> */}
+    </>
   )
 }
