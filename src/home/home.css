@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.MuiButton-root {
+    text-transform: none !important;
+}
+
 .cardHome {
     margin: auto;
     border-radius: 16px !important;
@@ -36,3 +40,12 @@
 .cardContent {
     max-width: 280px;
 }
+
+.homeButtons {
+    display: inline-flex;
+    margin: auto;
+    margin-top: 5vh;
+    width: 40%;
+    justify-content:space-evenly;
+}
+
