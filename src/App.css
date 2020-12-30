@@ -20,3 +20,7 @@
 .MuiTabs-root {
   margin-left: auto;
 }
+
+.App {
+  height: 100vh;
+}

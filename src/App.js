@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import { Typography, Switch, ThemeProvider, Box} from '@material-ui/core';
+import { Typography, IconButton, ThemeProvider, Box, Paper} from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles'
 import { BrowserRouter, Route, Switch as RouteSwitch, Link } from "react-router-dom";
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 import Home from './home/Home';
 import About from './about/About';
 import Contact from './contact/Contact';
 import Projects from './projects/Projects';
+import Brightness3Icon from '@material-ui/icons/Brightness3';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
 
 import './App.css'
 import { lightTheme, darkTheme } from "./Themes"
@@ -21,13 +22,17 @@ function App() {
 
   return (
     <ThemeProvider theme={appliedTheme}>
-      <ParallaxProvider>
-        <div className="App">
+      <Paper className="App" square>
           <BrowserRouter>
             <Route path="/" render={(history) => (
               <Box style={{ display: 'flex', alignItems: 'center'}}>
                 <Typography style={{ fontWeight: 600, paddingLeft: '1em', paddingRight: '1em' }}>Dalton Ronan</Typography>
-                <Switch size='small' onClick={() => setTheme(!theme)} />
+                <IconButton size='small' onClick={() => setTheme(!theme)}>
+                  { theme ? 
+                  <Brightness3Icon aria-label="Toggle light/dark theme" title="Toggle light/dark theme" /> : 
+                  <Brightness7Icon aria-label="Toggle light/dark theme" title="Toggle light/dark theme" />
+                  }
+                </IconButton>
                 <Tabs
                   value={history.location.pathname !== "/" ? history.location.pathname : false}
                   indicatorColor="primary"
@@ -47,9 +52,8 @@ function App() {
               <Route path="/contact" component={Contact}></Route>
             </RouteSwitch>
           </BrowserRouter>
-        </div>
-      </ParallaxProvider>
-    </ThemeProvider>
+        </Paper>
+     </ThemeProvider>
   );
 }
 

@@ -25,9 +25,9 @@ export default function Home() {
       </Fade>
       <Fade delay={3000} duration={2000} style={{ display: 'flex' }}>
         <Box className="homeButtons">
-          <Button variant="outlined" color="primary" component={Link} to="/about">Learn More</Button>
+          <Button aria-label="Learn More" variant="outlined" color="primary" component={Link} to="/about">Learn More</Button>
           <a style={{textDecoration: 'none'}} href={resume} rel="noopener noreferrer" target="_blank">
-          <Button variant="outlined" color="primary">Resume</Button>
+          <Button aria-label="Rèsumè" variant="outlined" color="primary">Resume</Button>
           </a>
         </Box>
       </Fade>

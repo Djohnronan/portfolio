@@ -1,35 +1,32 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
-import { CardContent, CardMedia, Typography } from '@material-ui/core';
-import headshot from "../media/headshot.jpg"
-import fish from "../media/fish.jpg"
+import { CardContent, Typography } from '@material-ui/core';
+// import headshot from "../media/headshot.jpg"
+// import fish from "../media/fish.jpg"
 import './about.css'
-import { Parallax } from 'react-scroll-parallax';
 
 export default function About() {
-  var photos = [
-    {
-      name: "photo",
-      description: "photo",
-      image: headshot
-    },
-    {
-      name: "photo2",
-      description: "photo2",
-      image: fish
+  // var photos = [
+  //   {
+  //     name: "photo",
+  //     description: "photo",
+  //     image: headshot
+  //   },
+  //   {
+  //     name: "photo2",
+  //     description: "photo2",
+  //     image: fish
 
-    },
-    {
-      name: "photo3",
-      description: "photo3",
-      image: headshot
+  //   },
+  //   {
+  //     name: "photo3",
+  //     description: "photo3",
+  //     image: headshot
 
-    },
-
-  ]
+  //   },
+  // ]
 
   return (
-    <div >
       <Card className='aboutBlurb' style={{ marginTop: '7vh', marginRight: '10vh' }}>
         <CardContent>
           <Typography>
@@ -43,26 +40,5 @@ export default function About() {
           </Typography>
         </CardContent>
       </Card>
-
-      {/* <Parallax x={['-95', '200']}>
-        <Card className='aboutPhotoCarousel' style={{ marginTop: '7vh', marginLeft: '10vh' }}>
-          <Carousel>
-            {
-              photos.map((item, i) => <CardMedia
-                className='carouselPhoto'
-                key={i}
-                image={item.image}
-                title={item.name} />
-              )
-            }
-          </Carousel>
-        </Card>
-      </Parallax> */}
-      <Card className="aboutOther">
-        <Typography>
-          sample
-                </Typography>
-      </Card>
-    </div>
   )
 }
