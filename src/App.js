@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import { Typography, IconButton, ThemeProvider, Box, Paper} from '@material-ui/core';
+import Zoom from '@material-ui/core/Zoom';
+import Tooltip from '@material-ui/core/Tooltip';
 import { createMuiTheme } from '@material-ui/core/styles'
 import { BrowserRouter, Route, Switch as RouteSwitch, Link } from "react-router-dom";
-import Tooltip from '@material-ui/core/Tooltip';
-import Zoom from '@material-ui/core/Zoom';
+import { Typography, IconButton, ThemeProvider, Box, Paper} from '@material-ui/core';
 
 import Home from './home/Home';
 import About from './about/About';
 import Contact from './contact/Contact';
-import Projects from './projects/Projects';
+import Experience from './experience/Experience';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 
@@ -20,7 +20,7 @@ import { lightTheme, darkTheme } from "./Themes"
 function App() {
   const [theme, setTheme] = useState(true);
   const appliedTheme = createMuiTheme(theme ? lightTheme : darkTheme)
-  const routes = ["/home", "/about", "/projects", "/contact"]
+  const routes = ["/home", "/about", "/experience", "/contact"]
 
   return (
     <ThemeProvider theme={appliedTheme}>
@@ -44,7 +44,7 @@ function App() {
                 >
                   <Tab label="Home" value={routes[0]} component={Link} to={routes[0]}/>
                   <Tab label="About Me" value={routes[1]} component={Link} to={routes[1]} />
-                  <Tab label="Projects" value={routes[2]} component={Link} to={routes[2]} />
+                  <Tab label="Experience" value={routes[2]} component={Link} to={routes[2]} />
                   <Tab label="Contact" value={routes[3]} component={Link} to={routes[3]} />
                 </Tabs>
               </Box>)}
@@ -52,7 +52,7 @@ function App() {
             <RouteSwitch>
               <Route path="/home" component={Home}></Route>
               <Route path="/about" component={About}></Route>
-              <Route path="/projects" component={Projects}></Route>
+              <Route path="/experience" component={Experience}></Route>
               <Route path="/contact" component={Contact}></Route>
             </RouteSwitch>
           </BrowserRouter>
