@@ -10,24 +10,20 @@ export default function Home() {
 
   return (
     <>
-      <Box style={{ marginTop: '15vh', marginLeft: '10vh' }}>
-        <Fade duration={2000}>
+      <Fade duration={1500} cascade>
+        <Box style={{ marginTop: '15vh', marginLeft: '10vh' }}>
           <Typography style={{ fontSize: 45 }}>Hello, I'm</Typography>
-        </Fade>
-      </Box>
-      <Box style={{ marginTop: '5vh', marginLeft: '25vh' }}>
-        <Fade delay={1000} duration={2000}>
+        </Box>
+        <Box style={{ marginTop: '5vh', marginLeft: '25vh' }}>
           <Typography style={{ fontWeight: 600 }} variant='h2' color='primary'>Dalton Ronan</Typography>
-        </Fade>
-      </Box>
-      <Fade delay={2000} duration={2000}>
-        <Typography style={{ fontSize: 45,  marginTop: '5vh', marginLeft: '35vh', marginRight: '10vh'}}>undergraduate Computing Science student at the University of Alberta in Edmonton, Canada.</Typography>
-      </Fade>
-      <Fade delay={3000} duration={2000} style={{ display: 'flex' }}>
+        </Box>
+        <Box style={{ marginTop: '5vh', marginLeft: '35vh', marginRight: '10vh' }}>
+          <Typography style={{ fontSize: 45 }}>undergraduate Computing Science student at the University of Alberta in Edmonton, Canada.</Typography>
+        </Box>
         <Box className="homeButtons">
           <Button aria-label="Learn More" variant="outlined" color="primary" component={Link} to="/about">Learn More</Button>
-          <a style={{textDecoration: 'none'}} href={resume} rel="noopener noreferrer" target="_blank">
-          <Button aria-label="Rèsumè" variant="outlined" color="primary">Resume</Button>
+          <a style={{ textDecoration: 'none' }} href={resume} rel="noopener noreferrer" target="_blank">
+            <Button aria-label="Rèsumè" variant="outlined" color="primary">View Resume</Button>
           </a>
         </Box>
       </Fade>

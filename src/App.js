@@ -4,6 +4,8 @@ import Tabs from '@material-ui/core/Tabs';
 import { Typography, IconButton, ThemeProvider, Box, Paper} from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles'
 import { BrowserRouter, Route, Switch as RouteSwitch, Link } from "react-router-dom";
+import Tooltip from '@material-ui/core/Tooltip';
+import Zoom from '@material-ui/core/Zoom';
 
 import Home from './home/Home';
 import About from './about/About';
@@ -27,12 +29,14 @@ function App() {
             <Route path="/" render={(history) => (
               <Box style={{ display: 'flex', alignItems: 'center'}}>
                 <Typography style={{ fontWeight: 600, paddingLeft: '1em', paddingRight: '1em' }}>Dalton Ronan</Typography>
+                <Tooltip title="Toggle light/dark theme" placement="right" TransitionComponent={Zoom}>
                 <IconButton size='small' onClick={() => setTheme(!theme)}>
                   { theme ? 
                   <Brightness3Icon aria-label="Toggle light/dark theme" title="Toggle light/dark theme" /> : 
                   <Brightness7Icon aria-label="Toggle light/dark theme" title="Toggle light/dark theme" />
-                  }
+                }
                 </IconButton>
+                </Tooltip>
                 <Tabs
                   value={history.location.pathname !== "/" ? history.location.pathname : false}
                   indicatorColor="primary"
