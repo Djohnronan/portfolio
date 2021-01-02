@@ -27,7 +27,7 @@ function App() {
       <Paper className="App" square>
           <BrowserRouter>
             <Route path="/" render={(history) => (
-              <Box style={{ display: 'flex', alignItems: 'center'}}>
+              <Box className="navBar" style={{ display: 'flex', alignItems: 'center'}}>
                 <Typography style={{ fontWeight: 600, paddingLeft: '1em', paddingRight: '1em' }}>Dalton Ronan</Typography>
                 <Tooltip title="Toggle light/dark theme" placement="right" TransitionComponent={Zoom}>
                 <IconButton size='small' onClick={() => setTheme(!theme)}>
