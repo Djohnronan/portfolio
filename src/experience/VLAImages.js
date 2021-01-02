@@ -18,7 +18,7 @@ const VLAImages = [
     {
         img: SED,
         title: 'Spectral Energy Distribution and light curve',
-        caption: 'Overall Spectral Energy Distribution (SED) and light curve of entire observation period.'
+        caption: 'Spectral Energy Distribution and light curve of entire observation period.'
     },
     {
         img: epoch1SED,
