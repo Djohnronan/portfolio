@@ -61,10 +61,10 @@ export default function Projects() {
         <Typography style={{ fontWeight: 600 }} variant='h6'>GufyGuber (January - April 2020) </Typography>
         <Typography style={{ fontStyle: 'italic' }}>course project</Typography>
         <Typography className="projectDesc">
-          My first venture into Java and software development. This was a semester long project to design and implement a simple,
-          attractive, and easy-to-use ride-sharing application for Android. As a group of six developers, we were given 24 partial
-          user stories to start with. From there, we completed the requirement elicitation, outlined and modeled the object oriented
-          design with UML, mocked the UI/UX with storyboards, and implemented our design in Android Studio. The result, GufyGuber:
+          My first venture into Java and software development. This was a semester long project to design and implement a simple, attractive, and 
+          easy-to-use ride-sharing application for Android. As a group of six developers, we were given 24 partial user stories to start with. From there, 
+          we completed the requirement elicitation, outlined and modeled the object oriented design with UML, mocked the UI/UX with storyboards, and 
+          implemented our design in Android Studio. The result, GufyGuber:
         </Typography >
         <Container style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', paddingTop: '1em', overflow: 'hidden' }}>
           <GridList style={{ flexWrap: 'nowrap', transform: 'translateZ(0)' }} spacing={20}>
@@ -74,7 +74,15 @@ export default function Projects() {
           </GridList>
         </Container>
         <Typography className="projectDesc">
-          Check out the <a rel="noopener noreferrer" target="_blank" href="https://github.com/CMPUT301W20T12/GufyGuber">repo</a>.
+          I worked closely with other members of the team to implement various features of the app, including: the Google Sign-In and Firebase integration, 
+          the communication and progression of the ride story between the rider and the driver, and elements of the user interface design. 
+          For a more detailed description of the project, documentation, and the codebase, you can check out 
+          the <a rel="noopener noreferrer" target="_blank" href="https://github.com/CMPUT301W20T12/GufyGuber">github repo</a>.
+          <br/><br/>
+          This project was a new experience for me. Before working on it, I had never really considered pursuing any sort of software 
+          development or front-end work. But, I found myself very interested in the challenge of not only finding a solution from a programming 
+          perspective, but from a design perspective as well - finding a balance between logic and creativity. I quickly realized the challenges
+          and amount of work that goes into a well designed product, and became very interested in exploring this more.
         </Typography>
         <Divider />
         <Typography style={{ fontWeight: 600 }} variant='h6'>VLA Radio Observations of Blazar TXS 0506+056 (January - April 2018)</Typography>
@@ -97,8 +105,8 @@ export default function Projects() {
           the <a rel="noopener noreferrer" target="_blank" href={report}>final paper</a> or 
           the <a rel="noopener noreferrer" target="_blank" href={presentation}>presentation slides</a> for more details.
           <Container className="cardScroller">
-            {VLAImages.map((tile) => (
-              <Card style={{ margin: 10, width: 350, flex: '0 0 auto'}} >
+            {VLAImages.map((tile, index) => (
+              <Card key ={index} style={{ margin: 10, width: 350, flex: '0 0 auto'}} >
                 <CardMedia component='img' image={tile.img} title={tile.title}/>
                 <CardContent>
                   <Typography>{tile.caption}</Typography>
