@@ -1,0 +1,18 @@
+@media only screen and (min-width: 1180px) {
+    .message {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .message-container{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #contact-me{
+        padding-bottom: 24px;
+    }
+}
