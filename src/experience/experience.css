@@ -35,3 +35,18 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.skills{
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px !important;
+}
+
+.skills .MuiTypography-root {
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+.MuiIconButton-root {
+    float: right;
+}
