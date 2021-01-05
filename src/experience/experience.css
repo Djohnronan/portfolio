@@ -1,6 +1,5 @@
 .MuiTypography-root.projectDesc.MuiTypography-body1 {
     padding-top: 20px;
-    padding-bottom: 8px;
 }
 
 .MuiDivider-root {
@@ -17,6 +16,7 @@
 .screencast {
     display: flex !important;
     justify-content: center;
+    padding-top: 20px;
 }
 
 .screencast.iframe {
