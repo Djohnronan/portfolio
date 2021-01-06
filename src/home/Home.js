@@ -22,7 +22,7 @@ export default function Home() {
           <Typography style={{ fontSize: 45 }}>undergraduate Computing Science student at the University of Alberta in Edmonton, Canada.</Typography>
         </Box>
         <Box className="homeButtons">
-          <Button aria-label="Learn More" variant="outlined" color="primary" component={Link} to={process.env.PUBLIC_URL +  "/about"}>Learn More</Button>
+          <Button aria-label="Learn More" variant="outlined" color="primary" component={Link} to={"/about"}>Learn More</Button>
           <a style={{ textDecoration: 'none' }} href={resume} rel="noopener noreferrer" target="_blank">
             <Button aria-label="Rèsumè" variant="outlined" color="primary">View Resume</Button>
           </a>

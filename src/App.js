@@ -20,7 +20,7 @@ import { lightTheme, darkTheme } from "./Themes"
 function App() {
   const [theme, setTheme] = useState(true);
   const appliedTheme = createMuiTheme(theme ? lightTheme : darkTheme)
-  const routes = [process.env.PUBLIC_URL + "/home", process.env.PUBLIC_URL + "/about", process.env.PUBLIC_URL + "/experience", process.env.PUBLIC_URL + "/contact"]
+  const routes = ["/home", "/about", "/experience", "/contact"]
 
   return (
     <ThemeProvider theme={appliedTheme}>
@@ -50,10 +50,10 @@ function App() {
               </Box>)}
             />
             <RouteSwitch>
-              <Route path={process.env.PUBLIC_URL + "/home"} component={Home}></Route>
-              <Route path={process.env.PUBLIC_URL + "/about"} component={About}></Route>
-              <Route path={process.env.PUBLIC_URL + "/experience"} component={Experience}></Route>
-              <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact}></Route>
+              <Route path={"/home"} component={Home}></Route>
+              <Route path={"/about"} component={About}></Route>
+              <Route path={"/experience"} component={Experience}></Route>
+              <Route path={"/contact"} component={Contact}></Route>
             </RouteSwitch>
           </HashRouter>
         </Paper>

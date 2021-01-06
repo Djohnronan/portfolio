@@ -33,7 +33,7 @@ export default function About() {
         variant="outlined" 
         color="primary" 
         component={Link} 
-        to={process.env.PUBLIC_URL + "/experience"}>
+        to={"/experience"}>
           Experience
       </Button>
     </>
