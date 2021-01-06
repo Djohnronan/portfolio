@@ -1,6 +1,6 @@
 {
-  "homepage": "https://djohnronan.github.io/portfolio/",
-  "name": "portfolio",
+  "homepage": "https://djohnronan.github.io/home",
+  "name": "home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
