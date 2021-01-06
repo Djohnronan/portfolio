@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Zoom from '@material-ui/core/Zoom';
 import Tooltip from '@material-ui/core/Tooltip';
 import { createMuiTheme } from '@material-ui/core/styles'
-import { BrowserRouter, Route, Switch as RouteSwitch, Link } from "react-router-dom";
+import { HashRouter, Route, Switch as RouteSwitch, Link } from "react-router-dom";
 import { Typography, IconButton, ThemeProvider, Box, Paper} from '@material-ui/core';
 
 import Home from './home/Home';
@@ -25,7 +25,7 @@ function App() {
   return (
     <ThemeProvider theme={appliedTheme}>
       <Paper className="App" square>
-          <BrowserRouter>
+          <HashRouter>
             <Route path="/" render={(history) => (
               <Box className="navBar" style={{ display: 'flex', alignItems: 'center'}}>
                 <Typography style={{ fontWeight: 600, paddingLeft: '1em', paddingRight: '1em' }}>Dalton Ronan</Typography>
@@ -55,7 +55,7 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/experience"} component={Experience}></Route>
               <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact}></Route>
             </RouteSwitch>
-          </BrowserRouter>
+          </HashRouter>
         </Paper>
      </ThemeProvider>
   );
